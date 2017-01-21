@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Managecourses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coursename</th>
+      <th>Responsibleperson</th>
+      <th>Duration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @managecourses.each do |managecourse| %>
+      <tr>
+        <td><%= managecourse.coursename %></td>
+        <td><%= managecourse.responsibleperson %></td>
+        <td><%= managecourse.duration %></td>
+        <td><%= link_to 'Show', managecourse %></td>
+        <td><%= link_to 'Edit', edit_managecourse_path(managecourse) %></td>
+        <td><%= link_to 'Destroy', managecourse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Managecourse', new_managecourse_path %>

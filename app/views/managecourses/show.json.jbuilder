@@ -1,0 +1,1 @@
+json.partial! "managecourses/managecourse", managecourse: @managecourse

@@ -1,0 +1,2 @@
+class Managecourse < ApplicationRecord
+end
