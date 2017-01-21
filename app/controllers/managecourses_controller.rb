@@ -1,6 +1,6 @@
 class ManagecoursesController < ApplicationController
   before_action :set_managecourse, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_admin!
   # GET /managecourses
   # GET /managecourses.json
   def index
