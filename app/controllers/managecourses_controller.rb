@@ -14,7 +14,7 @@ class ManagecoursesController < ApplicationController
 
   # GET /managecourses/new
   def new
-    @managecourse = Managecourse.new
+    @managecourse = current_admin.managecourses.build
   end
 
   # GET /managecourses/1/edit
@@ -24,7 +24,7 @@ class ManagecoursesController < ApplicationController
   # POST /managecourses
   # POST /managecourses.json
   def create
-    @managecourse = Managecourse.new(managecourse_params)
+    @managecourse = current_admin.managecourses.build(managecourse_params)
 
     respond_to do |format|
       if @managecourse.save
